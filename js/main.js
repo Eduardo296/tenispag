@@ -137,11 +137,11 @@ let produtos = [
     },
     {
         "id": 6,
-        "img": "/images/Tenis 6.avif",
+        "img": "/images/tenis 6.avif",
         "Nome": "Tênis Nike Air Max SC Masculino",
         "Preco": 351.49,
         "Frete": "Frete grátis",
-        "tumb1": "/images/Tenis 6.avif",
+        "tumb1": "/images/tenis 6.avif",
         "tumb2": "/images/Tenis 6 - tumb 2.avif",
         "tumb3": "/images/Tenis 6 - tumb 3.avif",
         "tumb4": "/images/Tenis 6 - tumb 4.avif",

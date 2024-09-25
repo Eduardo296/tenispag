@@ -43,7 +43,7 @@ entrar.addEventListener('click', function(event){
             timer: 2000,
         }).then(() => {
             window.location.href = window.location.href =
-                '/ecommerce-product-page-main/colecao.html';
+                '/colecao.html';
         });
     })
     .catch((error) => {

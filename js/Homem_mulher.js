@@ -42,7 +42,7 @@ let imprime
             let mostra = '';
             for (let i = 0; i < sortedProducts.length; i++) {
                 mostra += `
-                <a href="/ecommerce-product-page-main/html/index.html?id=${sortedProducts[i].id}">
+                <a href="/html/index.html?id=${sortedProducts[i].id}">
                 <div class="cards individuo">
                     <div id="conteudo">
                         <img src="${sortedProducts[i].img}">

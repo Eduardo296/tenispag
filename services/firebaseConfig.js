@@ -110,11 +110,11 @@ auth.onAuthStateChanged((user) => {
 
 // Adiciona evento para abrir as páginas de login e criar conta
 document.getElementById('login-btn').addEventListener('click', () => {
-  window.location.href = "/ecommerce-product-page-main/html/login.html";
+  window.location.href = "/html/login.html";
 });
 
 document.getElementById('register-btn').addEventListener('click', () => {
-  window.location.href = "/ecommerce-product-page-main/html/criarConta.html";
+  window.location.href = "/html/criarConta.html";
 });
 
 // Função de logout

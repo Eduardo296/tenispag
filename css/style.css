@@ -75,6 +75,7 @@ main {
 .main {
     display: flex;
     justify-content: space-evenly;
+    gap: 30px;
 }
 main h2 {
     color: hsl(26, 100%, 55%);
@@ -95,7 +96,6 @@ main p {
 .preco h1 {
     padding-top: 7px;
     font-size: 30px;
-    
 }
 .preco button {
     border: none;
@@ -111,10 +111,9 @@ main p {
     text-decoration: line-through;
 }
 .botao {
-    gap: 15px;
-    font-size: 23px;
+    font-size: 30px;
     color: hsl(26, 100%, 55%);
-    background-color: hsl(231, 23%, 94%);
+    background-color: transparent;
     border: none;
     margin: 0;
     border-radius: 7px;
@@ -123,7 +122,6 @@ main p {
 }
 #num {
     color: black;
- 
 }
 .botao button {
     display: flex;
@@ -135,6 +133,28 @@ main p {
     gap: 30px;
     align-items: center;
 }
+.tamanho {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 5px;
+}
+
+.tamanho button{
+    color: black;
+    font-size: 22px;
+    border-radius: 10px;
+    background-color: hsl(231, 23%, 94%);
+    border: 1px solid hsl(219, 9%, 45%);
+    transition: all 0.3s ease;
+}
+.tamanho button:hover{
+    color: rgb(255, 255, 255);
+    font-size: 22px;
+    border-radius: 10px;
+    background-color: hsl(26, 100%, 50%);
+    border: 1px solid hsl(231, 23%, 94%);
+}
+
 .cart button {
     display: flex;
     align-items: center;
@@ -143,15 +163,16 @@ main p {
     width: 200px;
     height: 35px;
     border-radius: 15px;
-    background-color: hsla(26, 68%, 56%, 0.897);
+    background-color: hsl(26, 100%, 50%);
     box-shadow: none;
     transition: all 0.3s ease;
 }
-.cart button a{
+.cart button i, button{
     color: white;
 }
 .img img {
     border-radius: 20px;
+    object-fit: cover;
 }
 .todas {
     display: flex;
@@ -163,33 +184,48 @@ main p {
     cursor: pointer;
 }
 .cart button:hover{
-    box-shadow: 0px 2px 2px 0px hsl(25, 100%, 71%);
+    box-shadow: 2px 2px 0px 0px hsl(25, 100%, 71%);
     background-color: hsl(25, 100%, 71%);
 }
 .todas img:hover {
     opacity: 0.5;
     border: 2px solid rgb(255, 111, 0);
 }
+#frete {
+    color: #00A650;
+}
 
 /*popup*/
 .container-popup{
     display: none;
+    width: 450px;
     position: fixed;
     top: 90px;
     right: 210px;
     border: 1px solid rgba(0, 0, 0, 0.164);
     background-color: hsl(223, 64%, 98%);
     padding: 10px;
+    overflow: auto;
+    border-radius: 10px;
 }
 .popup {
     display: flex;
     align-items: center;
+    flex-direction: column;
+    max-height: 600px;
     
     gap: 20px
 }
-.popup button {
+.produto button:nth-child(3) {
     border: none;
-    background-color: hsl(25, 100%, 94%);
+    background-color: hsl(25, 100%, 88%);
+    color: hsl(26, 100%, 55%);
+    font-size: 17px;
+    border-radius: 10px;
+}
+.popup button:last-child {
+    border: none;
+    background-color: transparent;
     color: hsl(26, 100%, 55%);
     border-radius: 10px;
 }
@@ -199,4 +235,101 @@ main p {
 }
 .container-popup.active{
     display: block;
+}
+.produto {
+    min-width: 430px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+    gap: 20px;
+    padding: 0px 10px;
+}
+.produto img {
+    height: 100px;
+    width: 100px;
+    object-fit: cover;
+}
+#btnFinalizar {
+    margin-top: 20px;
+    margin-left: 25%;
+    border: none;
+    background-color: hsl(26, 100%, 50%);
+    padding: 10px;
+    font-size: 18px;
+    color: white;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    width: 200px;
+}
+#btnFinalizar:hover {
+    box-shadow: 2px 2px 0px 0px hsl(25, 100%, 71%);
+    background-color: hsla(25, 97%, 61%, 0.782);
+}
+
+
+#img1, #img2, #img3, #img4 {
+    height: 100px;
+    width: 100px;
+    object-fit: cover;
+}
+
+
+/* User */
+.none {
+    display: none;
+}
+.user-email {
+    flex-direction: column;
+    width: 350px;
+    min-height: 100px;
+    top: 10%;
+    background-color: hsl(223, 64%, 98%);
+    position: absolute;
+    z-index: 10000;
+    text-align: center;
+    padding-top: 15px;
+    font-family: 'Raleway',sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+    border: 1px solid rgba(0, 0, 0, 0.164);
+    border-radius: 10px;
+}
+.user {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#UserFlutuante {
+    position: absolute;
+    font-size: 16px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.541);
+    padding: 7px;
+    border-bottom-left-radius: 15px;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    pointer-events: none;
+    transition: all 0.03s ease;
+}
+#logout-btn {
+    max-width: 50px;
+    margin-top: 10px;
+    padding: 10px;
+    background-color: hsl(26, 100%, 55%);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+#logout-btn:hover {
+    background-color: hsl(26, 100%, 68%);
+}
+.vertical {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
